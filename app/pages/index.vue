@@ -5,40 +5,38 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
 
 <template>
     <main class="pb-10">
-        <header class="flex w-screen h-screen relative">
+        <header class="flex flex-col md:flex-row w-screen md:h-screen md:relative">
             <section>
-                <img src="/images/flower.png" alt="" class="w-[480px] absolute -left-20 -top-16 rotate-16">
+                <img src="/images/flower.png" alt=""
+                    class="hidden md:block w-[480px] absolute -left-20 -top-16 rotate-16">
                 <div class="">
-                    <div class="w-[295px] absolute left-[490px] flex items-center justify-center">
+                    <div class="hidden w-[295px] md:absolute left-[490px] md:flex items-center justify-center">
                         <img src="/images/marime5.jpeg" alt="" class="">
                     </div>
-                    <div class="w-[295px] absolute left-[260px] top-[30%] z-50 flex items-center justify-center">
+                    <div
+                        class="w-full md:w-[295px] md:absolute left-[260px] top-[30%] z-50 flex items-center justify-center">
                         <img src="/images/marime7.jpeg" alt="" class="">
                     </div>
-                    <div class="w-[295px] absolute bottom-0 flex items-center justify-center">
-                        <img src="/images/marime4.jpeg" alt="" class="w-[295px] absolute bottom-0">
+                    <div class="w-[295px] md:absolute bottom-0 hidden md:flex items-center justify-center">
+                        <img src="/images/marime4.jpeg" alt="" class="w-[295px]">
                     </div>
                     <img src="/images/flower-2.png" alt=""
-                        class=" w-[560px] absolute -bottom-6 left-[27.5%] rotate-y-12">
+                        class="hidden md:block w-[560px] md:absolute -bottom-6 left-[27.5%] rotate-y-12">
                 </div>
             </section>
-            <section class="w-[45%] h-screen absolute right-0 flex flex-col items-center gap-3 pt-14">
-
-                <div>
-
-                </div>
+            <section class="md:w-[45%] md:h-screen md:absolute right-0 flex flex-col items-center gap-3 pt-14">
                 <div class="mb-5 *:text-amber-900">
                     <div class="mb-7">
                         <h3 class="text-center mb-1 font-semibold">COM A BENÇÃO DE DEUS E SEUS PAIS </h3>
-                        <div class="flex justify-between items-center">
-                            <h3 class="italic">Elias Mondlane & Quiteria Mondlane</h3>
-                            <h3 class="italic">Bernado Nota & Faustina Nota</h3>
+                        <div class="flex justify-between items-center gap-3 md:gap-0 *:text-center ">
+                            <h3 class="italic text-sm md:text-base">Elias Mondlane & Quiteria Mondlane</h3>
+                            <h3 class="italic text-sm md:text-base">Bernado Nota & Faustina Nota</h3>
                         </div>
                     </div>
-                    <h2 class="text-8xl text-left">Imelda & Marcel</h2>
+                    <h2 class="text-7xl md:text-8xl text-center md:text-left">Imelda & Marcel</h2>
                 </div>
 
-                <div class="pl-12 mb-7 pr-5 w-2/3 flex flex-col items-center justify-center">
+                <div class="px-4 md:pl-12 mb-7 md:pr-5 md:w-2/3 flex flex-col items-center justify-center">
                     <p class="text-center">"O amor é sofredor, é benigno, o amor não é invejoso, o amor não trata com
                         leviandade, não se
                         ensoberbece; <br>
@@ -49,7 +47,7 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
                     <p class="font-semibold text-center text-2xl mt-7">13 de Dezembro de 2025</p>
                 </div>
 
-                <div class="grid grid-cols-3 pl-20 pr-6 items-start">
+                <div class="grid grid-cols-2 md:grid-cols-3 md:pl-20 md:pr-6 items-start gap-y-8">
                     <article class="flex flex-col items-center justify-center gap-1">
                         <div class="-ml-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 256 256">
@@ -96,7 +94,7 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
                             <span>Como chegar</span>
                         </button>
                     </article>
-                    <article class="flex flex-col items-center justify-center gap-1">
+                    <article class="flex flex-col items-center justify-center gap-1 col-span-2 md:col-span-1">
                         <div class="-ml-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 64">
                                 <path fill="currentColor"
@@ -138,11 +136,15 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
                         crianças!</cite>
                 </div>
             </section>
+
+            <div
+                class="md:hidden bg-gradient-to-b from-[rgba(0,0,0,0)] to-[#ffffff] absolute  h-[420px] w-full bottom-64">
+            </div>
         </header>
 
-        <section class="mt-36 w-screen flex flex-col items-center justify-center">
-            <h3 class="text-5xl mb-12 text-orange-900">Faltam:</h3>
-            <div class="*:text-6xl flex items-center gap-10">
+        <section class="mt-24 md:mt-36 static md:w-screen flex flex-col items-center justify-center">
+            <h3 class="text-3xl md:text-5xl mb-9 md:mb-12 text-orange-900">Faltam:</h3>
+            <div class="text-xl md:*:text-6xl flex items-center gap-4  md:gap-10">
                 <div class="flex flex-col gap-1 items-center justify-center"><span>50</span> <span>Dias</span> </div>
                 <span>:</span>
                 <div class="flex flex-col gap-1 items-center justify-center"><span>16</span> <span>Horas</span></div>
@@ -153,10 +155,11 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
             </div>
         </section>
 
-        <section class="w-screen h-screen flex pt-24 px-20 mt-20 gap-16 relative">
-            <img src="/images/marime3.jpg" alt="" class="w-2/5 h-[80vh] rounded">
-            <div class="w-1/2">
-                <h2 class="text-8xl text-orange-800">Nossa Historia</h2>
+        <section
+            class="w-screen md:h-screen flex flex-col md:flex-row pt-10   md:pt-24 px-6 md:px-20 mt-20 gap-16 relative">
+            <img src="/images/marime3.jpg" alt="" class="md:w-2/5  md:h-[80vh] rounded">
+            <div class="md:w-1/2">
+                <h2 class="text-6xl md:text-8xl text-orange-800 text-center md:text-left">Nossa Historia</h2>
                 <p class="text-justify text-2xl mt-5">A nossa história começou em 2017 com
                     uma apresentação especial de uma amiga
                     que, sem saber, estava a escrever o
@@ -174,27 +177,30 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
                     O nosso casamento.
                 </p>
             </div>
-            <div class="absolute bottom-40 right-1/4 text-orange-800">
+            <div class="absolute hidden md:block  md:bottom-40 right-1/4 text-orange-800">
                 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 24 24">
                     <path fill="currentColor"
                         d="M16.696 3C14.652 3 12.887 4.197 12 5.943C11.113 4.197 9.348 3 7.304 3C4.374 3 2 5.457 2 8.481s1.817 5.796 4.165 8.073S12 21 12 21s3.374-2.133 5.835-4.446C20.46 14.088 22 11.514 22 8.481S19.626 3 16.696 3" />
                 </svg>
             </div>
-            <img src="/images/flower-2.png" alt="" class="w-[400px] absolute bottom-2 right-16 rotate-6">
-            <img src="/images/flower-2.png" alt="" class="w-[400px] absolute bottom-1 left-[43%] rotate-90">
+            <img src="/images/flower-2.png" alt=""
+                class="w-[150px] md:w-[400px] absolute -bottom-[160px] md:bottom-2  right-3 md:right-16 -rotate-6 md:rotate-6">
+            <img src="/images/flower-2.png" alt=""
+                class="w-[150px] md:w-[400px] absolute left-3 -bottom-[165px] md:bottom-1 md:left-[43%] rotate-[85deg] md:rotate-[92deg]">
         </section>
 
-        <footer class="w-screen px-32 relative mt-40 flex justify-center">
-            <img src="/images/flower-3.png" alt="" class="h-[500px] absolute left-10 top-12">
+        <footer class="w-screen md:px-32 relative mt-16 md:mt-40 flex justify-center">
+            <img src="/images/flower-3.png" alt=""
+                class="w-16 md:w-auto md:h-[500px] md:block absolute -left-1 -bottom-8 md:left-10 md:top-12 z-50">
 
-            <div class="flex relative">
-                <img src="/images/marime6.jpeg" alt="" class="w-96 h-[590px]">
-                <img src="/images/marime7.jpeg" alt="" class="w-96 h-[590px]">
-                <img src="/images/marime5.jpeg" alt="" class="w-96 h-[590px]">
-                <div class="absolute w-full h-full bg-black/30 flex justify-center pt-3">
-                    <h2 class="text-white text-8xl">Esperamos por ti!</h2>]
+            <div class="flex relative mt-48">
+                <img src="/images/marime6.jpeg" alt="" class="hidden md:block w-96 h-[590px]">
+                <img src="/images/marime7.jpeg" alt="" class=" w-96 h-[590px]">
+                <img src="/images/marime5.jpeg" alt="" class="hidden md:block w-96 h-[590px]">
+                <div class="absolute w-full h-full bg-black/30 flex justify-center pt-8 md:pt-3">
+                    <h2 class="text-white text-6xl md:text-8xl">Esperamos por ti!</h2>]
 
-                    <div class="absolute bottom-5 right-1/2 text-white">
+                    <div class="absolute bottom-5 right-[40%] md:right-1/2 text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
                             <path fill="currentColor"
                                 d="M16.696 3C14.652 3 12.887 4.197 12 5.943C11.113 4.197 9.348 3 7.304 3C4.374 3 2 5.457 2 8.481s1.817 5.796 4.165 8.073S12 21 12 21s3.374-2.133 5.835-4.446C20.46 14.088 22 11.514 22 8.481S19.626 3 16.696 3" />
@@ -204,7 +210,8 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
 
             </div>
 
-            <img src="/images/flower-4.png" alt="" class="h-[500px] absolute right-10 top-12">
+            <img src="/images/flower-4.png" alt=""
+                class="w-16 md:w-auto md:h-[500px] absolute md:right-10 -right-1 md:top-12 -bottom-8 z-50">
         </footer>
     </main>
 </template>
