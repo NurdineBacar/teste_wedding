@@ -143,7 +143,7 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
         </header>
 
         <section class="mt-24 md:mt-36 static md:w-screen flex flex-col items-center justify-center">
-            <h3 class="text-3xl md:text-5xl mb-9 md:mb-12 text-orange-900">Faltam:</h3>
+            <h3 class="text-3xl md:text-5xl mb-9 md:mb-12 text-amber-900">Faltam:</h3>
             <div class="text-xl md:*:text-6xl flex items-center gap-4  md:gap-10">
                 <div class="flex flex-col gap-1 items-center justify-center"><span>50</span> <span>Dias</span> </div>
                 <span>:</span>
@@ -159,7 +159,7 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
             class="w-screen md:h-screen flex flex-col md:flex-row pt-10   md:pt-24 px-6 md:px-20 mt-20 gap-16 relative">
             <img src="/images/marime3.jpg" alt="" class="md:w-2/5  md:h-[80vh] rounded">
             <div class="md:w-1/2">
-                <h2 class="text-6xl md:text-8xl text-orange-800 text-center md:text-left">Nossa Historia</h2>
+                <h2 class="text-6xl md:text-8xl text-amber-900 text-center md:text-left">Nossa Historia</h2>
                 <p class="text-justify text-2xl mt-5">A nossa história começou em 2017 com
                     uma apresentação especial de uma amiga
                     que, sem saber, estava a escrever o
@@ -177,7 +177,7 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
                     O nosso casamento.
                 </p>
             </div>
-            <div class="absolute hidden md:block  md:bottom-40 right-1/4 text-orange-800">
+            <div class="absolute hidden md:block  md:bottom-40 right-1/4 text-amber-900">
                 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 24 24">
                     <path fill="currentColor"
                         d="M16.696 3C14.652 3 12.887 4.197 12 5.943C11.113 4.197 9.348 3 7.304 3C4.374 3 2 5.457 2 8.481s1.817 5.796 4.165 8.073S12 21 12 21s3.374-2.133 5.835-4.446C20.46 14.088 22 11.514 22 8.481S19.626 3 16.696 3" />
