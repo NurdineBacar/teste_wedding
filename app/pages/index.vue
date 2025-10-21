@@ -199,13 +199,6 @@ const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" he
                 <img src="/images/marime5.jpeg" alt="" class="hidden md:block w-96 h-[590px]">
                 <div class="absolute w-full h-full bg-black/30 flex justify-center pt-8 md:pt-3">
                     <h2 class="text-white text-6xl md:text-8xl">Esperamos por ti!</h2>]
-
-                    <div class="absolute bottom-5 right-[40%] md:right-1/2 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M16.696 3C14.652 3 12.887 4.197 12 5.943C11.113 4.197 9.348 3 7.304 3C4.374 3 2 5.457 2 8.481s1.817 5.796 4.165 8.073S12 21 12 21s3.374-2.133 5.835-4.446C20.46 14.088 22 11.514 22 8.481S19.626 3 16.696 3" />
-                        </svg>
-                    </div>
                 </div>
 
             </div>
