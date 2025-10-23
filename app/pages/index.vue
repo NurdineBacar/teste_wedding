@@ -360,7 +360,7 @@ onMounted(() => {
                         <p class="text-center text-xs font-medium w-3/4 text-gray-500">Estrada Eduardo Mondlane, paragem
                             pandora</p>
                         <a href="https://maps.app.goo.gl/UcD1yguZbc2UNwUU9"
-                            class="mt-2 md:mt-10 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
+                            class="mt-4 md:mt-6 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="32"
@@ -380,7 +380,7 @@ onMounted(() => {
                         <p class="text-center text-xs font-medium text-gray-500">Folha Verde Events Venue, Rua de
                             Empasse Parcela 856, Matola</p>
                         <a href="https://maps.app.goo.gl/Qvr4hn6j3BRfLeqe8"
-                            class="mt-7 md:mt-10 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
+                            class="mt-4 md:mt-10 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="32"
@@ -406,7 +406,7 @@ onMounted(() => {
                         <p class="text-center text-xs font-medium w-3/4 text-gray-500">Estrada Eduardo Mondlane, paragem
                             pandora</p>
                         <a href="https://maps.app.goo.gl/Qvr4hn6j3BRfLeqe8"
-                            class="mt-10 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
+                            class="mt-4 md:mt-2 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="32"
@@ -473,7 +473,7 @@ onMounted(() => {
             <!-- Imagem -->
             <div class="w-full lg:w-2/5 flex">
                 <img src="/images/marime3.jpg" alt="Nossa História"
-                    class="w-full md:max-w-md lg:max-w-none h-auto md:max-h-[500px] lg:max-h-[70vh] object-cover rounded-2xl shadow-2xl story-image">
+                    class="w-full  md:max-h-[70vh] object-cover rounded-2xl shadow-2xl story-image">
             </div>
 
             <!-- Texto -->
@@ -571,7 +571,8 @@ button {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-img {
+.flower1,
+.flower2 {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
