@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ["@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/google-fonts", "@vueuse/nuxt"],
   googleFonts: {
     families: {
       'Fleur De Leah': true

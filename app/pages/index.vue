@@ -8,6 +8,46 @@ import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { SplitText } from 'gsap/SplitText'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useNow } from '@vueuse/core'
+
+// Data alvo da contagem regressiva
+const targetDate = ref(new Date('2025-12-13T00:00:00'))
+
+// useNow atualiza automaticamente a cada segundo
+const now = useNow()
+
+// Calcula o tempo restante
+const timeLeft = computed(() => {
+    const difference = targetDate.value.getTime() - now.value.getTime()
+
+    if (difference <= 0) {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true }
+    }
+
+    return {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+        expired: false
+    }
+})
+
+// Função para formatar o input datetime-local
+const formattedDate = computed({
+    get: () => {
+        const date = new Date(targetDate.value)
+        const year = date.getFullYear()
+        const month = String(date.getMonth() + 1).padStart(2, '0')
+        const day = String(date.getDate()).padStart(2, '0')
+        const hours = String(date.getHours()).padStart(2, '0')
+        const minutes = String(date.getMinutes()).padStart(2, '0')
+        return `${year}-${month}-${day}T${hours}:${minutes}`
+    },
+    set: (value) => {
+        targetDate.value = new Date(value)
+    }
+})
 
 // Registrar plugins
 gsap.registerPlugin(SplitText, ScrollTrigger)
@@ -15,7 +55,10 @@ gsap.registerPlugin(SplitText, ScrollTrigger)
 const locationIcon = ref('<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 48c-79.5 0-144 61.39-144 137c0 87 96 224.87 131.25 272.49a15.77 15.77 0 0 0 25.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>')
 
 const images = ref([])
-const couple_name = ref()
+const couple_name = ref();
+
+
+
 
 onMounted(() => {
     // Configuração global do GSAP
@@ -380,7 +423,7 @@ onMounted(() => {
                         <p class="text-center text-xs font-medium text-gray-500">Folha Verde Events Venue, Rua de
                             Empasse Parcela 856, Matola</p>
                         <a href="https://maps.app.goo.gl/Qvr4hn6j3BRfLeqe8"
-                            class="mt-4 md:mt-10 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
+                            class="mt-6 md:mt-10 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
                                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="32"
@@ -443,25 +486,25 @@ onMounted(() => {
             <div class="text-xl md:*:text-6xl flex items-center gap-2 md:gap-8 lg:gap-10 flex-wrap justify-center">
                 <div
                     class="flex flex-col gap-1 items-center justify-center countdown-item min-w-[60px] md:min-w-[100px]">
-                    <span class="countdown-number text-3xl md:text-6xl">50</span>
+                    <span class="countdown-number text-3xl md:text-6xl">{{ timeLeft.days }}</span>
                     <span class="countdown-label text-sm md:text-base">Dias</span>
                 </div>
                 <span class="countdown-separator text-2xl md:text-4xl">:</span>
                 <div
                     class="flex flex-col gap-1 items-center justify-center countdown-item min-w-[60px] md:min-w-[100px]">
-                    <span class="countdown-number text-3xl md:text-6xl">16</span>
+                    <span class="countdown-number text-3xl md:text-6xl">{{ timeLeft.hours }}</span>
                     <span class="countdown-label text-sm md:text-base">Horas</span>
                 </div>
                 <span class="countdown-separator text-2xl md:text-4xl">:</span>
                 <div
                     class="flex flex-col gap-1 items-center justify-center countdown-item min-w-[60px] md:min-w-[100px]">
-                    <span class="countdown-number text-3xl md:text-6xl">08</span>
+                    <span class="countdown-number text-3xl md:text-6xl">{{ timeLeft.minutes || "sem" }}</span>
                     <span class="countdown-label text-sm md:text-base">Minutos</span>
                 </div>
                 <span class="countdown-separator text-2xl md:text-4xl">:</span>
                 <div
                     class="flex flex-col gap-1 items-center justify-center countdown-item min-w-[60px] md:min-w-[100px]">
-                    <span class="countdown-number text-3xl md:text-6xl">08</span>
+                    <span class="countdown-number text-3xl md:text-6xl">{{ timeLeft.seconds || "sem" }}</span>
                     <span class="countdown-label text-sm md:text-base">Segundos</span>
                 </div>
             </div>
