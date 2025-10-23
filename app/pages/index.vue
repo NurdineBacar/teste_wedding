@@ -483,7 +483,8 @@ onMounted(() => {
         <section
             class="mt-24 md:mt-36 static md:w-screen flex flex-col items-center justify-center countdown-section px-4">
             <h3 class="text-3xl md:text-5xl mb-9 md:mb-12 text-amber-900 text-center">Faltam:</h3>
-            <div class="text-xl md:*:text-6xl flex items-center gap-2 md:gap-8 lg:gap-10 flex-wrap justify-center">
+            <div class="text-xl md:*:text-6xl flex items-center gap-2 md:gap-8 lg:gap-10 flex-wrap justify-center"
+                v-if="!timeLeft.expired">
                 <div
                     class="flex flex-col gap-1 items-center justify-center countdown-item min-w-[60px] md:min-w-[100px]">
                     <span class="countdown-number text-3xl md:text-6xl">{{ timeLeft.days }}</span>
@@ -508,6 +509,7 @@ onMounted(() => {
                     <span class="countdown-label text-sm md:text-base">Segundos</span>
                 </div>
             </div>
+            <h3 class="countdown-number text-lg md:text-3xl" v-else>Hoje é o grande dia!!!!!!!!</h3>
         </section>
 
         <!-- Seção Nossa História - Layout Corrigido -->
