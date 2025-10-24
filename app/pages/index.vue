@@ -400,7 +400,7 @@ onMounted(() => {
                         </div>
                         <h2 class="text-2xl md:text-3xl text-amber-900">Cerimonia Religiosa</h2>
                         <p class="text-sm font-medium">11:30 Horas</p>
-                        <p class="text-center text-xs font-medium w-3/4 text-gray-500">Estrada Eduardo Mondlane, paragem
+                        <p class="text-center text-xs font-medium w-3/4 text-gray-500">Av.Eduardo Mondlane, paragem
                             pandora</p>
                         <a href="https://maps.app.goo.gl/UcD1yguZbc2UNwUU9"
                             class="mt-4 md:mt-6 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
@@ -446,8 +446,8 @@ onMounted(() => {
                         </div>
                         <h2 class="text-2xl md:text-3xl text-amber-900">Copo de Agua</h2>
                         <p class="text-sm font-medium">17:00 Horas</p>
-                        <p class="text-center text-xs font-medium w-3/4 text-gray-500">Estrada Eduardo Mondlane, paragem
-                            pandora</p>
+                        <p class="text-center text-xs font-medium w-3/4 text-gray-500">olha Verde Events Venue, Rua de
+                            Empasse Parcela 856, Matola</p>
                         <a href="https://maps.app.goo.gl/Qvr4hn6j3BRfLeqe8"
                             class="mt-4 md:mt-2 flex items-center justify-center rounded-3xl border-2 border-amber-900 *:text-amber-900 px-3 py-2 gap-1 text-sm font-semibold hover:bg-amber-900 transition-all duration-300 ease-in-out hover:*:text-white hover:cursor-pointer transform hover:scale-105">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
